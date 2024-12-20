@@ -1,0 +1,30 @@
+# SIMPLE-DICE-ROLLERimport random
+
+# Function to simulate rolling a dice
+def roll_dice():
+    # Randomly select a number between 1 and 6
+    return random.randint(1, 6)
+
+# Main function to run the dice roller
+def dice_roller():
+    print("Welcome to the Dice Roller!")
+    
+    while True:
+        # Ask the user if they want to roll the dice
+        user_input = input("Do you want to roll the dice? (yes/no): ").lower()
+        
+        if user_input == 'yes':
+            # Roll the dice and display the result
+            result = roll_dice()
+            print(f"You rolled a {result}!")
+        
+        elif user_input == 'no':
+            print("Goodbye!")
+            break
+        
+        else:
+            print("Invalid input. Please type 'yes' or 'no'.")
+
+# Running the dice roller
+if __name__ == "__main__":
+    dice_roller()
